@@ -38,7 +38,7 @@ public class Algorithm {
 				System.out.println("enter tht passcode to generate hashcode");
 				String password=in.nextLine();
 				Properties prop=new Properties();
-				FileReader fr=new FileReader("E:\\saltstring.properties");
+				FileReader fr=new FileReader("E:\\saltstring.properties");//change according to the property file n give ur salt string
 				prop.load(fr);
 				final String salt=prop.getProperty("salt");
 				String EncryptedPassword=alg.sha512(password, salt);
